@@ -17,30 +17,8 @@ namespace SDA.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            var przedmiot = new Przedmiot { NazwaPrzedmiotu = "Bazy", Semestr = 1, Egzaminowany = true };
-            db.Przedmiot.Add(przedmiot);
-            try
-            {
-                db.SaveChanges();
-            }
-            catch (System.Data.Entity.Validation.DbEntityValidationException dbEx)
-            {
-                Exception raise = dbEx;
-                foreach (var validationErrors in dbEx.EntityValidationErrors)
-                {
-                    foreach (var validationError in validationErrors.ValidationErrors)
-                    {
-                        string message = string.Format("{0}:{1}",
-                            validationErrors.Entry.Entity.ToString(),
-                            validationError.ErrorMessage);
-                        // raise a new exception nesting
-                        // the current instance as InnerException
-                        raise = new InvalidOperationException(message, raise);
-                    }
-                }
-                throw raise;
-            }
-            return View();
+            var listaStudentow = db.Student.ToList();
+            return View(listaStudentow);
         }
     }
 }

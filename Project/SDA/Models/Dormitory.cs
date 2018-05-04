@@ -10,7 +10,7 @@ namespace SDA.Models
         public int DormitoryId { get; set; }
         public string Ulica { get; set; }
         public string NumerMieszkania { get; set; }
-        public int Miejscowosc { get; set; }
+        public string Miejscowosc { get; set; }
         public string KodPocztowy { get; set; }
         public byte IloscPokoi { get; set; }
     }

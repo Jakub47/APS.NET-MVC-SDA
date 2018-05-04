@@ -15,6 +15,11 @@ namespace SDA.DAL
 
         }
 
+        static SDAContext()
+        {
+            Database.SetInitializer<SDAContext>(new SDAInitializer());
+        }
+
         public DbSet<Przedmiot> Przedmiot { get; set; }
         public DbSet<Dormitory> Dormitory { get; set; }
         public DbSet<Student> Student { get; set; }
