@@ -1,21 +1,17 @@
-﻿using SDA.Models;
+﻿using SDA.Migrations;
+using SDA.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Web;
 
 namespace SDA.DAL
 {
-    public class SDAInitializer : DropCreateDatabaseAlways<SDAContext>
+    public class SDAInitializer : MigrateDatabaseToLatestVersion<SDAContext,Configuration>
     {
-        protected override void Seed(SDAContext context)
-        {
-            base.Seed(context);
-            SeedKursyData(context);
-        }
-
-        private void SeedKursyData(SDAContext context)
+        public static void SeedKursyData(SDAContext context)
         {
             var przedmioty = new List<Przedmiot>
             {
@@ -31,7 +27,7 @@ namespace SDA.DAL
                 LiczbaGodzinCwiczen = 23,PunktyECTS = 8},
             };
 
-            przedmioty.ForEach(i => context.Przedmiot.Add(i));
+            przedmioty.ForEach(i => context.Przedmiot.AddOrUpdate(i));
             try
             {
                 context.SaveChanges();
@@ -65,7 +61,7 @@ namespace SDA.DAL
                 IloscPokoi = 210},
             };
 
-            dormitorys.ForEach(i => context.Dormitory.Add(i));
+            dormitorys.ForEach(i => context.Dormitory.AddOrUpdate(i));
             try
             {
                 context.SaveChanges();
@@ -102,7 +98,7 @@ namespace SDA.DAL
                 Saldo = 0},
             };
 
-            studenci.ForEach(i => context.Student.Add(i));
+            studenci.ForEach(i => context.Student.AddOrUpdate(i));
             try
             {
                 context.SaveChanges();

@@ -116,6 +116,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805041036238_InitialCreate.cs" />
+    <Compile Include="Migrations\201805041036238_InitialCreate.Designer.cs">
+      <DependentUpon>201805041036238_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805050949005_dodaniePolaNazwaPlikuZdjecia.cs" />
+    <Compile Include="Migrations\201805050949005_dodaniePolaNazwaPlikuZdjecia.Designer.cs">
+      <DependentUpon>201805050949005_dodaniePolaNazwaPlikuZdjecia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Dormitory.cs" />
     <Compile Include="Models\Ocena.cs" />
     <Compile Include="Models\Przedmiot.cs" />
@@ -141,6 +150,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201805041036238_InitialCreate.resx">
+      <DependentUpon>201805041036238_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805050949005_dodaniePolaNazwaPlikuZdjecia.resx">
+      <DependentUpon>201805050949005_dodaniePolaNazwaPlikuZdjecia.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

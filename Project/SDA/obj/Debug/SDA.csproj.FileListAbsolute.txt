@@ -79,3 +79,6 @@ C:\Users\Ragnus\Desktop\WProjects\SDA\Project\SDA\obj\Debug\SDA.csproj.CoreCompi
 C:\Users\Ragnus\Desktop\WProjects\SDA\Project\SDA\obj\Debug\SDA.csproj.CopyComplete
 C:\Users\Ragnus\Desktop\WProjects\SDA\Project\SDA\obj\Debug\SDA.dll
 C:\Users\Ragnus\Desktop\WProjects\SDA\Project\SDA\obj\Debug\SDA.pdb
+C:\Users\Ragnus\Desktop\WProjects\SDA\Project\SDA\obj\Debug\SDA.Migrations.InitialCreate.resources
+C:\Users\Ragnus\Desktop\WProjects\SDA\Project\SDA\obj\Debug\SDA.csproj.GenerateResource.cache
+C:\Users\Ragnus\Desktop\WProjects\SDA\Project\SDA\obj\Debug\SDA.Migrations.dodaniePolaNazwaPlikuZdjecia.resources

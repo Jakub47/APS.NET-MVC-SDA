@@ -18,7 +18,7 @@ namespace SDA.Models
         public DateTime DataUrodzenia { get; set; }
         public int Grupa { get; set; }
         public double Saldo { get; set; }
-
+        public string NazwaPlikuZdjecia { get; set; }
 
         List<Przedmiot> Przedmioty { get; set; }
     }
